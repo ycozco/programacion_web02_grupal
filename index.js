@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var button_meet = document.getElementById("getMeet");
 button_meet.onclick = function (){
     var value = document.getElementById("meetString").value;
@@ -45,3 +46,14 @@ function table_sum(){
     document.getElementById("result_table").textContent = "La suma de la tabla es"+sum;
 }
  
+=======
+var button_missing_days = document.getElementById("missingDays");
+button_missing_days.onclick = function (){
+    var arequipa_day = new Date(2022,08,15);
+    var today = new Date();
+    var dif1 = arequipa_day-today;
+    var result = parseInt(dif1/ (1000 * 3600 * 24));
+    var result_paragraf = document.getElementById("result_arequipa_day");
+    result_paragraf.textContent = "Faltan "+result + " dias.";
+};
+>>>>>>> 3c5135ccefc5c2ee3bf60e75dd7192cfefea2ff4
