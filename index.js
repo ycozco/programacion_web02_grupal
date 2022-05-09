@@ -34,7 +34,3 @@ button_missing_days.onclick = function (){
     result_paragraf.textContent = "Faltan "+result + " dias.";
 };
 
-var button_meetString = document.getElementById("button_meetString");
-button_meetString.onclick = function (){
-    var string1 = document.getElementById("string1").value;
-};
