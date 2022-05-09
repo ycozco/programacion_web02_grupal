@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var button_meet = document.getElementById("getMeet");
 button_meet.onclick = function (){
     var value = document.getElementById("meetString").value;
@@ -46,7 +46,7 @@ function table_sum(){
     document.getElementById("result_table").textContent = "La suma de la tabla es"+sum;
 }
  
-=======
+
 var button_missing_days = document.getElementById("missingDays");
 button_missing_days.onclick = function (){
     var arequipa_day = new Date(2022,08,15);
@@ -56,4 +56,21 @@ button_missing_days.onclick = function (){
     var result_paragraf = document.getElementById("result_arequipa_day");
     result_paragraf.textContent = "Faltan "+result + " dias.";
 };
->>>>>>> 3c5135ccefc5c2ee3bf60e75dd7192cfefea2ff4
+
+//Ejecicio 2
+var button_get_reverse_string = document.getElementById("reverseString");
+button_get_reverse_string.onclick = function (){
+        var value = document.getElementById("string").value;
+        var result = reverseString(value);
+        var result_paragraf = document.getElementById("result_string");
+        result_paragraf.textContent =result;
+};
+function reverseString(data){
+    var result = "";
+    var i = data.length;
+    while (i>0) {
+        result += data.substring(i-1,i);
+        i--;
+    }
+    return result;
+}
