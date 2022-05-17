@@ -77,7 +77,6 @@
 - Ejercicio 03: Crear nuevos archivos MarkDown y almacenarlos en el servidor
 
 <tr><img src="https://github.com/ycozco/programacion_web02_grupal/blob/main/ejercicio3.png" alt="Ejercicio 03" style="width:50%; height:auto"/></tr>
-- Ejercicio 04: Escribir un página que reciba el URL de la sesión de google meet de hoy y devuelva el código de la sesión sin guiones separadores
 
 
 </td>
@@ -86,23 +85,16 @@
 </tr>
 <tr><td colspan="6">II. SOLUCIÓN DE CUESTIONARIO:
 <ul>
-- Pruebe este código de arrayGenerator() en la página https://jslint.com/
-<li> Los warnings generados en JSLint son formas de expresar que un código puede ser escrito de manera más eficiente o entendible, 
-al revisar el código de arrayGenerator(), JSLint no recomienda utilizar el bucle for, por el contrario, la manera más entendible 
-de resolver esto es reemplazándo por un bucle while, además de que se debe declarar el iterador antes del bucle, y su respectivo 
-"x++" como (x = x + 1). Por el otro lado JSLint tambien considera la corrección de espaciados. </li>
-- Revisar esta discusión en stackoverflow - https://stackoverflow.com/questions/4852017/how-to-initialize-an-arrays-length-in-javascript
-    - ¿Cómo se pueden resolver los warnings?
-<li>-  JSLINT es mas estricto con respecto a practicas que los programadores considerarian normales. Al 
-crear un arreglo como objeto con var no permite una iteracion normal ya que var puedes volver a reedeclarar 
-la variable trayendo consigo problemas q JSLINT no acepta, otra razon es la confusion al ingresar valores Array(5) 
-asigna la longitud, sin embargo tambien puede ser tomada como que Array posee un solo elemento que es 4 es por ello
- que jslint te recomienda el uso de let en vez de var, sin embargo let es introducido en es6(2015) y el problema fue
- publicado en 2011. </li>
-    - ¿Se puede modificar la solución usando map? ¿Cómo?
-<li>- La solucion presentada en la discusion "Array.apply(null, new Array(4)).map(function () {});" es aceptada por el 
-navegador sin embargo dara un warning emptyblock por JSLINT, curiosamente si se crea un "new Map(4)" JSLINT no arroja
- ningun warning sin embargo al probarlo en el navegador dara un error. </li>
+<li>En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?
+La linea Content type al no ser invocada, NodeJS lo crea por defecto, en ejemplos posteriores se utiliza para especificar el uso de información tipo Json. Como nosotros utilizamos express, la respuesta se elegirá a un tipo de contenido predeterminado (comúnmente text).
+</li>
+<li>En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt? </li>
+Deberia estar el la carpeta private
+<li>¿Entiende la expresión regular en el código y se da cuenta de para qué es útil? 
+Si,reemplazo cada salto de linea con con br que es el salto de linea en html, es muy util a a la hora de filtrar y sobresescribir contenido.
+</li>
+<li>Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente? Se puede ver por la consola o tambien con extensiones de google Chrome.
+</li>
 
 </ul>
 </td>
@@ -114,7 +106,7 @@ navegador sin embargo dara un warning emptyblock por JSLINT, curiosamente si se 
 <li></li>
 <li>Se trabajo en grupo de 4 personas, cada uno trabajo en una branch diferente, hubo errores respecto al merge, 
 se sortearon los ejercicios para su desarrollo .</li>
-<li>Se hizo un merge del codigo de los integrantes del grupo de acuerdo al tiempo que cada uno acababa de realizar su ejercicio.</li>
+<li> Se considero una estructura basica del html, cada ejercicio por separado, para los archivos js, consideramos la creacion de archivos para cada funcion </li>
 </ul>
 </td>
 </<tr>
