@@ -6,6 +6,9 @@ const MarkdownIt = require('markdown-it'),
     md = new MarkdownIt();
 const app = express()
 
+const dir = 'pub'
+const files = fs.readdirSync(dir)
+
 app.use(express.static('pub'))
 app.use(bp.json())
 app.use(bp.urlencoded({
@@ -44,3 +47,11 @@ app.post('/createFile', (request, response) => {
      });
 } )
 
+app.get('/mostrar', (request, response) => {
+    console.log("Se ejecuto mostrar")
+    response.setHeader('Content-Type', 'application/json')
+    response.json({
+        text: files
+    })    
+    console.log("Se terminó de ejecutar")
+})
