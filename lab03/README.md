@@ -70,15 +70,13 @@
 
 - Ejercicio 01: Listas los archivos Markdown disponibles
 </tr>
-<tr><img src="https://github.com/ycozco/programacion_web02_grupal/blob/main/ejercicio1.png" alt="Ejercicio 01" style="width:50%; height:auto"/> </tr>
+<tr><img src="https://github.com/ycozco/programacion_web02_grupal/blob/main/lab03/pub/ejercicio01.png" alt="Ejercicio 01" style="width:50%; height:auto"/> </tr>
 
 - Ejercicio 02: Ver el contenido de un archivo Markdown traducido a HTML
-<tr><img src="https://github.com/ycozco/programacion_web02_grupal/blob/main/ejercicio2.png" alt="Ejercicio 02" style="width:50%; height:auto"/></tr>
+<tr><img src="https://github.com/ycozco/programacion_web02_grupal/blob/main/lab03/pub/ejercicio02.png"" alt="Ejercicio 02" style="width:50%; height:auto"/></tr>
 - Ejercicio 03: Crear nuevos archivos MarkDown y almacenarlos en el servidor
 
-<tr><img src="https://github.com/ycozco/programacion_web02_grupal/blob/main/ejercicio3.png" alt="Ejercicio 03" style="width:50%; height:auto"/></tr>
-
-
+<tr><img src="https://github.com/ycozco/programacion_web02_grupal/blob/main/lab03/pub/ejercicio03.png" alt="Ejercicio 03" style="width:50%; height:auto"/></tr>
 </td>
 </<tr>
 #
