@@ -24,8 +24,9 @@ app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
 })
 
+//Ejercicio 2
 
-app.post('/', (request, response) => {
+app.post('/recitar', (request, response) => {
     console.log(request.body)
     let markDownText = request.body.text
     console.log(markDownText)
@@ -42,11 +43,8 @@ app.post('/', (request, response) => {
                 response.end(JSON.stringify({
                     text: data
                 }))
-
             })
 })
-
-//Ejercicio 2
 
 app.get('/listarMarkdown', (request, response) => {
     fs.readdir(path.resolve(__dirname, 'markdown_files'), 'utf8',
