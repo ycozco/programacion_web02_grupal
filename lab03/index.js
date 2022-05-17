@@ -21,7 +21,7 @@ app.get('/', (request, response) => {
 })
 
 app.post('/', (request, response) => {
-    console.log(request.body)
+    console.log(request.body )
     let markDownText = request.body.text
     console.log(markDownText)
     let htmlText = md.render(markDownText)
@@ -29,4 +29,18 @@ app.post('/', (request, response) => {
     response.end(JSON.stringify({
         text: htmlText
     }))
+
 })
+app.post('/createFile', (request, response) => { 
+
+    console.log(request.body)
+    let name = request.body.title;
+    let text = request.body.value;
+    console.log(name)
+    console.log(text)
+    fs.writeFile('pub/'+name+'.txt',text+'',function (err) {
+        if (err) throw err;
+       console.log('File is created successfully.');
+     });
+} )
+
