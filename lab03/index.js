@@ -6,11 +6,12 @@ const MarkdownIt = require('markdown-it'),
     md = new MarkdownIt();
 const app = express()
 
-const dir = 'pub'
-const files = fs.readdirSync(dir)
+const cors = require('cors');
+
 
 app.use(express.static('pub'))
 app.use(bp.json())
+app.use(cors());
 app.use(bp.urlencoded({
     extended: true
 }))
@@ -23,35 +24,56 @@ app.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'index.html'))
 })
 
-app.post('/', (request, response) => {
-    console.log(request.body )
+//Ejercicio 2
+app.post('/recitar', (request, response) => {
+    console.log(request.body)
     let markDownText = request.body.text
     console.log(markDownText)
-    let htmlText = md.render(markDownText)
-    response.setHeader('Content-Type', 'application/json')
-    response.end(JSON.stringify({
-        text: htmlText
-    }))
-
+        fs.readFile(path.resolve(__dirname, 'markdown_files/' + markDownText), 'utf8',
+            (err, data) => {
+                if (err) {
+                    console.error(err)
+                    response.status(500).json({
+                        error: 'message'
+                    })
+                    return
+                }
+                response.setHeader('Content-Type', 'application/json')
+                response.end(JSON.stringify({
+                    text: data
+                }))
+            })
 })
-app.post('/createFile', (request, response) => { 
 
-    console.log(request.body)
-    let name = request.body.title;
-    let text = request.body.value;
-    console.log(name)
-    console.log(text)
-    fs.writeFile('pub/files_mark/'+name+'.md',text+'',function (err) {
-        if (err) throw err;
-       console.log('File is created successfully.');
-     });
-} )
-
+app.get('/listarMarkdown', (request, response) => {
+    fs.readdir(path.resolve(__dirname, 'markdown_files'), 'utf8',
+        (err, data) => {
+            if (err) {
+                console.error(err)
+                response.status(500).json({
+                    error: 'message'
+                })
+                return
+            }
+            response.json({
+                text: data
+            })
+        })
+    //
+})
 app.get('/mostrar', (request, response) => {
-    console.log("Se ejecuto mostrar")
-    response.setHeader('Content-Type', 'application/json')
-    response.json({
-        text: files
-    })    
-    console.log("Se terminó de ejecutar")
+    fs.readFile(path.resolve(__dirname, 'markdown_files/' + markdownFile), 'utf8',
+        (err, data) => {
+            if (err) {
+                console.error(err)
+                response.status(500).json({
+                    error: 'message'
+                })
+                return
+            }
+            response.json({
+                text: data
+            })
+        })
+    //
 })
