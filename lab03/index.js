@@ -38,7 +38,7 @@ app.post('/createFile', (request, response) => {
     let text = request.body.value;
     console.log(name)
     console.log(text)
-    fs.writeFile('pub/'+name+'.txt',text+'',function (err) {
+    fs.writeFile('pub/files_mark/'+name+'.md',text+'',function (err) {
         if (err) throw err;
        console.log('File is created successfully.');
      });
